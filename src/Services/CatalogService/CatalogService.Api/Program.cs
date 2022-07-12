@@ -1,3 +1,4 @@
+using CatalogService.Api.Services;
 using CatalogService.Api.Settings;
 using Microsoft.Extensions.Options;
 using System.Reflection;
@@ -8,6 +9,8 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+
+builder.Services.AddScoped<ICategoryService, CategoryService>();
 
 builder.Services.AddAutoMapper(typeof(Program));
 
