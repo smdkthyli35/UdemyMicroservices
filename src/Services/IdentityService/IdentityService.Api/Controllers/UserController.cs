@@ -1,15 +1,18 @@
 ﻿using IdentityService.Api.Dtos;
 using IdentityService.Api.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 using System.Linq;
 using System.Threading.Tasks;
 using UdemyMicroservices.Common.Dtos;
+using static IdentityServer4.IdentityServerConstants;
 
 namespace IdentityService.Api.Controllers
 {
-    [Route("api/[controller]")]
+    [Authorize(LocalApi.PolicyName)]
+    [Route("api/[controller]/[action]")]
     [ApiController]
     public class UserController : ControllerBase
     {
