@@ -28,6 +28,10 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "IdentityService", "Identity
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "IdentityService.Api", "src\Services\IdentityService\IdentityService.Api\IdentityService.Api.csproj", "{2EBF8436-8E69-4325-BF58-593C0D209CE5}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "PhotoStockService", "PhotoStockService", "{251EA322-E941-4EE1-90DD-D74F49E58E3B}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PhotoStockService.Api", "src\Services\PhotoStockService\PhotoStockService.Api\PhotoStockService.Api.csproj", "{18A42A14-A6E7-4245-9F37-C61B77D85C0C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -46,6 +50,10 @@ Global
 		{2EBF8436-8E69-4325-BF58-593C0D209CE5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2EBF8436-8E69-4325-BF58-593C0D209CE5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2EBF8436-8E69-4325-BF58-593C0D209CE5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{18A42A14-A6E7-4245-9F37-C61B77D85C0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18A42A14-A6E7-4245-9F37-C61B77D85C0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18A42A14-A6E7-4245-9F37-C61B77D85C0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18A42A14-A6E7-4245-9F37-C61B77D85C0C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -60,6 +68,8 @@ Global
 		{3787739F-970A-4D3D-AD9D-3D3C2EFE6916} = {365030D9-5FB7-43C1-9597-BAB40A59D270}
 		{EAD28319-A4AD-41EE-8256-6160368B36A8} = {76011FB3-2271-4600-A65A-4DE351205FFD}
 		{2EBF8436-8E69-4325-BF58-593C0D209CE5} = {EAD28319-A4AD-41EE-8256-6160368B36A8}
+		{251EA322-E941-4EE1-90DD-D74F49E58E3B} = {76011FB3-2271-4600-A65A-4DE351205FFD}
+		{18A42A14-A6E7-4245-9F37-C61B77D85C0C} = {251EA322-E941-4EE1-90DD-D74F49E58E3B}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9D223011-7521-4D3D-8224-B3D436D7D2C3}
