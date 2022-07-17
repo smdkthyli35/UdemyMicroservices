@@ -1,4 +1,5 @@
 using BasketService.Api.Services;
+using BasketService.Api.Services.Interfaces;
 using BasketService.Api.Settings;
 using Microsoft.Extensions.Options;
 using UdemyMicroservices.Common.Services;
@@ -10,6 +11,7 @@ var builder = WebApplication.CreateBuilder(args);
 builder.Services.AddHttpContextAccessor();
 
 builder.Services.AddScoped<ICommonIdentityService, CommonIdentityService>();
+builder.Services.AddScoped<IBasketService, BasketService.Api.Services.BasketService>();
 
 builder.Services.Configure<RedisSettings>(builder.Configuration.GetSection("RedisSettings"));
 

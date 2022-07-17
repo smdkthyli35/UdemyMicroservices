@@ -1,7 +1,7 @@
 ﻿using BasketService.Api.Dtos;
 using UdemyMicroservices.Common.Dtos;
 
-namespace BasketService.Api.Services
+namespace BasketService.Api.Services.Interfaces
 {
     public interface IBasketService
     {
