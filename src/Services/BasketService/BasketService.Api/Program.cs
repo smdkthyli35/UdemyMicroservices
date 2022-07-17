@@ -1,10 +1,15 @@
 using BasketService.Api.Services;
 using BasketService.Api.Settings;
 using Microsoft.Extensions.Options;
+using UdemyMicroservices.Common.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.AddHttpContextAccessor();
+
+builder.Services.AddScoped<ICommonIdentityService, CommonIdentityService>();
 
 builder.Services.Configure<RedisSettings>(builder.Configuration.GetSection("RedisSettings"));
 
