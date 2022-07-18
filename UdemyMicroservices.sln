@@ -34,7 +34,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "PhotoStockService.Api", "sr
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "BasketService", "BasketService", "{DFC61338-B78E-41DA-8A4A-B00E38592EAB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BasketService.Api", "src\Services\BasketService\BasketService.Api\BasketService.Api.csproj", "{78A39156-662B-4238-86BF-67644C235C4C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BasketService.Api", "src\Services\BasketService\BasketService.Api\BasketService.Api.csproj", "{78A39156-662B-4238-86BF-67644C235C4C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DiscountService", "DiscountService", "{3C356F6A-509E-43E1-9B54-EA06FCAD9893}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DiscountService.Api", "src\Services\DiscountService\DiscountService.Api\DiscountService.Api.csproj", "{9411589F-CF64-42D8-980D-3F2E7CD96313}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -62,6 +66,10 @@ Global
 		{78A39156-662B-4238-86BF-67644C235C4C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{78A39156-662B-4238-86BF-67644C235C4C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{78A39156-662B-4238-86BF-67644C235C4C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9411589F-CF64-42D8-980D-3F2E7CD96313}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9411589F-CF64-42D8-980D-3F2E7CD96313}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9411589F-CF64-42D8-980D-3F2E7CD96313}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9411589F-CF64-42D8-980D-3F2E7CD96313}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -80,6 +88,8 @@ Global
 		{18A42A14-A6E7-4245-9F37-C61B77D85C0C} = {251EA322-E941-4EE1-90DD-D74F49E58E3B}
 		{DFC61338-B78E-41DA-8A4A-B00E38592EAB} = {76011FB3-2271-4600-A65A-4DE351205FFD}
 		{78A39156-662B-4238-86BF-67644C235C4C} = {DFC61338-B78E-41DA-8A4A-B00E38592EAB}
+		{3C356F6A-509E-43E1-9B54-EA06FCAD9893} = {76011FB3-2271-4600-A65A-4DE351205FFD}
+		{9411589F-CF64-42D8-980D-3F2E7CD96313} = {3C356F6A-509E-43E1-9B54-EA06FCAD9893}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9D223011-7521-4D3D-8224-B3D436D7D2C3}
