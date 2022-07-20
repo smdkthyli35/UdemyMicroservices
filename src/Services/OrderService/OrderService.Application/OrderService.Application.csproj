@@ -15,8 +15,4 @@
     <ProjectReference Include="..\OrderService.Infrastructure\OrderService.Infrastructure.csproj" />
   </ItemGroup>
 
-  <ItemGroup>
-    <Folder Include="Features\Commands\" />
-  </ItemGroup>
-
 </Project>
