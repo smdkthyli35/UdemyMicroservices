@@ -5,3 +5,4 @@ Services
 -BasketApi -> 5013
 -DiscountApi -> 5014
 -OrderApi -> 5015
+-FakePaymentApi -> 5016

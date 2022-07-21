@@ -42,15 +42,19 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DiscountService.Api", "src\
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "OrderService", "OrderService", "{D4D4D637-6BCC-40CA-88F2-C42D4FCC3E97}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderService.Api", "src\Services\OrderService\OrderService.Api\OrderService.Api.csproj", "{C7B437D7-1428-4BDA-8E7F-716432AAEFCC}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderService.Api", "src\Services\OrderService\OrderService.Api\OrderService.Api.csproj", "{C7B437D7-1428-4BDA-8E7F-716432AAEFCC}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderService.Application", "src\Services\OrderService\OrderService.Application\OrderService.Application.csproj", "{01019784-E96C-4A81-AEE1-F6E9EE64C026}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderService.Application", "src\Services\OrderService\OrderService.Application\OrderService.Application.csproj", "{01019784-E96C-4A81-AEE1-F6E9EE64C026}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderService.Domain", "src\Services\OrderService\OrderService.Domain\OrderService.Domain.csproj", "{9271C1AA-A828-4E25-9EF0-E2EFF942FAF3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderService.Domain", "src\Services\OrderService\OrderService.Domain\OrderService.Domain.csproj", "{9271C1AA-A828-4E25-9EF0-E2EFF942FAF3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderService.Infrastructure", "src\Services\OrderService\OrderService.Infrastructure\OrderService.Infrastructure.csproj", "{F3BA2BEB-7668-46A4-9208-6A90069109C8}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderService.Infrastructure", "src\Services\OrderService\OrderService.Infrastructure\OrderService.Infrastructure.csproj", "{F3BA2BEB-7668-46A4-9208-6A90069109C8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OrderService.Domain.Core", "src\Services\OrderService\OrderService.Domain.Core\OrderService.Domain.Core.csproj", "{586066CE-362E-4DF3-9FB3-C783082CACF0}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OrderService.Domain.Core", "src\Services\OrderService\OrderService.Domain.Core\OrderService.Domain.Core.csproj", "{586066CE-362E-4DF3-9FB3-C783082CACF0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "FakePaymentService", "FakePaymentService", "{384EEEDE-3D0A-44C5-B413-799BABF72C7D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FakePaymentService.Api", "src\Services\FakePaymentService\FakePaymentService.Api\FakePaymentService.Api.csproj", "{1AA640A9-BB12-4649-9112-183374D8C4B4}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -102,6 +106,10 @@ Global
 		{586066CE-362E-4DF3-9FB3-C783082CACF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{586066CE-362E-4DF3-9FB3-C783082CACF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{586066CE-362E-4DF3-9FB3-C783082CACF0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1AA640A9-BB12-4649-9112-183374D8C4B4}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1AA640A9-BB12-4649-9112-183374D8C4B4}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1AA640A9-BB12-4649-9112-183374D8C4B4}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1AA640A9-BB12-4649-9112-183374D8C4B4}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -128,6 +136,8 @@ Global
 		{9271C1AA-A828-4E25-9EF0-E2EFF942FAF3} = {D4D4D637-6BCC-40CA-88F2-C42D4FCC3E97}
 		{F3BA2BEB-7668-46A4-9208-6A90069109C8} = {D4D4D637-6BCC-40CA-88F2-C42D4FCC3E97}
 		{586066CE-362E-4DF3-9FB3-C783082CACF0} = {D4D4D637-6BCC-40CA-88F2-C42D4FCC3E97}
+		{384EEEDE-3D0A-44C5-B413-799BABF72C7D} = {76011FB3-2271-4600-A65A-4DE351205FFD}
+		{1AA640A9-BB12-4649-9112-183374D8C4B4} = {384EEEDE-3D0A-44C5-B413-799BABF72C7D}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {9D223011-7521-4D3D-8224-B3D436D7D2C3}
