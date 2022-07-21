@@ -1,5 +1,9 @@
+using MediatR;
 using Microsoft.EntityFrameworkCore;
+using OrderService.Application.Features.Commands.CreateOrder;
 using OrderService.Infrastructure.Context;
+using System.Reflection;
+using UdemyMicroservices.Common.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -12,6 +16,12 @@ builder.Services.AddDbContext<OrderDbContext>(options =>
         configure.MigrationsAssembly("OrderService.Infrastructure");
     });
 });
+
+builder.Services.AddHttpContextAccessor();
+
+builder.Services.AddScoped<ICommonIdentityService, CommonIdentityService>();
+
+builder.Services.AddMediatR(typeof(CreateOrderCommandHandler).Assembly);
 
 builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
