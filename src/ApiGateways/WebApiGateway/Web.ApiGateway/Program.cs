@@ -7,8 +7,14 @@ builder.Services.AddOcelot();
 
 var app = builder.Build();
 
+Host.CreateDefaultBuilder(args).ConfigureAppConfiguration((hostingContext, config) =>
+{
+    config.AddJsonFile($"configuration.{hostingContext.HostingEnvironment.EnvironmentName.ToLower()}.json")
+            .AddEnvironmentVariables();
+});
+
 app.MapGet("/", () => "Hello World!");
 
-await app.UseOcelot();
+app.UseOcelot().Wait();
 
 app.Run();
