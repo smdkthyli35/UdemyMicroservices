@@ -7,3 +7,4 @@ Services
 -OrderApi -> 5015
 -FakePaymentApi -> 5016
 Gateway -> 5000
+Web -> 5010
