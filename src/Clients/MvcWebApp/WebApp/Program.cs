@@ -1,4 +1,8 @@
+using WebApp.Models;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.Configure<ServiceApiSettings>(builder.Configuration.GetSection("ServiceApiSettings"));
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
