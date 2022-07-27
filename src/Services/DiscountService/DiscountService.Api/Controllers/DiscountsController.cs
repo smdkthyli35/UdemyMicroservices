@@ -32,6 +32,7 @@ namespace DiscountService.Api.Controllers
             return CreateActionResultInstance(await _discountService.GetById(id));
         }
 
+        [HttpGet]
         [Route("/api/[controller]/[action]/{code}")]
         public async Task<IActionResult> GetByCode(string code)
         {
