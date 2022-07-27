@@ -28,12 +28,12 @@ namespace WebApp.Controllers
 
             if (!response.IsSuccessful)
             {
-                response.Errors.ForEach(error =>
+                response.Errors.ForEach(err =>
                 {
-                    ModelState.AddModelError(String.Empty, error);
+                    ModelState.AddModelError(String.Empty, err);
                 });
 
-                return View(response);
+                return View();
             }
 
             return RedirectToAction(nameof(Index), "Home");
