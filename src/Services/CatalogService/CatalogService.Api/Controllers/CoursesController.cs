@@ -33,8 +33,8 @@ namespace CatalogService.Api.Controllers
             return CreateActionResultInstance(response);
         }
 
-        [HttpGet("[action]/{userId}")]
-        //[Route("/api/[controller]/GetAllByUserId/{userId}")]
+        //[HttpGet("[action]/{userId}")]
+        [Route("/api/[controller]/GetAllByUserId/{userId}")]
         public async Task<IActionResult> GetAllByUserId(string userId)
         {
             Response<List<Dtos.CourseDto>> response = await _courseService.GetAllByUserIdAsync(userId);
