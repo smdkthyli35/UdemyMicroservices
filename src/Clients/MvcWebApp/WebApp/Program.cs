@@ -11,14 +11,16 @@ builder.Services.Configure<ClientSettings>(builder.Configuration.GetSection("Cli
 builder.Services.Configure<ServiceApiSettings>(builder.Configuration.GetSection("ServiceApiSettings"));
 builder.Services.AddHttpContextAccessor();
 
+builder.Services.AddAccessTokenManagement();
+
 builder.Services.AddScoped<ICommonIdentityService, CommonIdentityService>();
 
 var serviceApiSettings = builder.Configuration.GetSection("ServiceApiSettings").Get<ServiceApiSettings>();
 
-builder.Services.AddHttpClient<IClientCredentialTokenService, ClientCredentialTokenService>();
-
 builder.Services.AddScoped<ResourceOwnerPasswordTokenHandler>();
 builder.Services.AddScoped<ClientCredentialTokenHandler>();
+
+builder.Services.AddHttpClient<IClientCredentialTokenService, ClientCredentialTokenService>();
 
 builder.Services.AddHttpClient<IIdentityService, IdentityService>();
 
