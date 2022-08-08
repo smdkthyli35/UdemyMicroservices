@@ -15,6 +15,8 @@ builder.Services.AddScoped<ICommonIdentityService, CommonIdentityService>();
 
 var serviceApiSettings = builder.Configuration.GetSection("ServiceApiSettings").Get<ServiceApiSettings>();
 
+builder.Services.AddHttpClient<IClientCredentialTokenService, ClientCredentialTokenService>();
+
 builder.Services.AddScoped<ResourceOwnerPasswordTokenHandler>();
 
 builder.Services.AddHttpClient<IIdentityService, IdentityService>();
