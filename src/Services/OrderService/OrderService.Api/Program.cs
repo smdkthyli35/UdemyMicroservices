@@ -1,8 +1,10 @@
+using MassTransit;
 using MediatR;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc.Authorization;
 using Microsoft.EntityFrameworkCore;
+using OrderService.Application.Consumer;
 using OrderService.Application.Features.Commands.CreateOrder;
 using OrderService.Infrastructure.Context;
 using System.IdentityModel.Tokens.Jwt;
@@ -12,6 +14,27 @@ using UdemyMicroservices.Common.Services;
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
+
+builder.Services.AddMassTransit(mt =>
+{
+    mt.AddConsumer<CreateOrderMessageCommandConsumer>();
+
+    mt.UsingRabbitMq((context, cfg) =>
+    {
+        cfg.Host(builder.Configuration["RabbitMQUrl"], "/", host =>
+        {
+            host.Username("guest");
+            host.Password("guest");
+        });
+
+        cfg.ReceiveEndpoint("create-order-service", e =>
+        {
+            e.ConfigureConsumer<CreateOrderMessageCommandConsumer>(context);
+        });
+    });
+});
+
+builder.Services.AddMassTransitHostedService();
 
 builder.Services.AddDbContext<OrderDbContext>(options =>
 {
@@ -52,7 +75,7 @@ if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();
     app.UseSwaggerUI();
-}   
+}
 
 app.UseHttpsRedirection();
 
